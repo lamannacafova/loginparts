@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://media.istockphoto.com/id/1287170933/photo/enter-login-and-password-internet-connection-and-cyber-protection.jpg?b=1&s=170667a&w=0&k=20&c=kZWzv8c-1IHbrvIWev96Qs5YZlsErbzt5WRP_9wzrsY=");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+header .logo {
+  font-size: 30px;
+  color: #000;
+}
+header .navigation a {
+  position: relative;
+  color: #162938;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0 15px;
+}
+header .navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2.6px;
+  background-color: #162938;
+  transition: all 0.3s;
+}
+header .navigation a:hover::after {
+  width: 80%;
+}
+header .navigation .btnLogin-popup {
+  width: 130px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid #162938;
+  color: #162938;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 45px;
+  transition: all 0.2s;
+}
+header .navigation .btnLogin-popup:hover {
+  background-color: #162938;
+  color: #fff;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+section .wrapper .icon-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 100;
+}
+section .wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+section .wrapper .login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+section .wrapper .login h2 {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+section .wrapper .login .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #000;
+  margin: 30px 0;
+}
+section .wrapper .login .input-box input:focus ~ label,
+section .wrapper .login .input-box input:valid ~ label {
+  top: -5px;
+}
+section .wrapper .login .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+section .wrapper .login .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+}
+section .wrapper .login .input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 57px;
+}
+section .wrapper .login .remember-forgot {
+  font-size: 1em;
+  font-weight: 500;
+  color: #162938;
+  display: flex;
+  justify-content: space-between;
+}
+section .wrapper .login .remember-forgot a {
+  text-decoration: none;
+  color: #162938;
+}
+section .wrapper .login .remember-forgot a:hover {
+  text-decoration: underline;
+}
+section .wrapper .login .btn {
+  margin-top: 15px;
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+}
+section .wrapper .login .login-register {
+  font-size: 1em;
+  font-weight: 500;
+  color: #162938;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+section .wrapper .login .login-register p a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+section .wrapper .login .login-register p a:hover {
+  text-decoration: underline;
+}
+section .form-box {
+  width: 100%;
+  padding: 40px;
+}
+section .register {
+  position: absolute;
+  transform: translateX(400px);
+}
+section .register h2 {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+section .register .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #000;
+  margin: 30px 0;
+}
+section .register .input-box input:focus ~ label,
+section .register .input-box input:valid ~ label {
+  top: -5px;
+}
+section .register .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+section .register .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+}
+section .register .input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 57px;
+}
+section .register .remember-forgot {
+  font-size: 1em;
+  font-weight: 500;
+  color: #162938;
+  display: flex;
+  justify-content: space-between;
+}
+section .register .remember-forgot a {
+  text-decoration: none;
+  color: #162938;
+}
+section .register .remember-forgot a:hover {
+  text-decoration: underline;
+}
+section .register .btn {
+  margin-top: 15px;
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+}
+section .register .login-register {
+  font-size: 1em;
+  font-weight: 500;
+  color: #162938;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+section .register .login-register p a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+section .register .login-register p a:hover {
+  text-decoration: underline;
+}
+section .active {
+  height: 520px;
+}
+section .active .login {
+  transition: none;
+  transform: translateX(-400px);
+}
+section .active .register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+section .active-popup {
+  transform: scale(1);
+}/*# sourceMappingURL=style.css.map */
